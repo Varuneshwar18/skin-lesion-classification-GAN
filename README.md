@@ -1,29 +1,76 @@
-# skin-lesion-classification-GAN
-Skin disease classification using GAN-based synthetic images
-# Skin Lesion Classification using GAN
+\# Skin Lesion Classification using GAN-based Synthetic Images
 
-## Overview
-This project focuses on classifying skin diseases using deep learning.
-To overcome limited medical image data, a **Generative Adversarial Network (GAN)**
-is used to generate synthetic skin lesion images.
 
-## Technologies Used
-- Python
-- GAN (Generator + Discriminator)
-- Streamlit (Frontend)
-- Flask (Backend API)
-- Roboflow Inference API
 
-## Features
-- Synthetic image generation using GAN
-- Skin lesion classification
-- Web-based UI using Streamlit
-- REST API using Flask
+\## Overview
 
-## Project Architecture
-GAN → Synthetic Images → Classifier → Web UI
+This project focuses on automated skin lesion classification using deep learning.
 
-## How to Run
+To address limited medical image availability and class imbalance, synthetic
+
+skin lesion images were generated using a Generative Adversarial Network (GAN).
+
+
+
+\## Project Pipeline
+
+GAN → Synthetic Images → CNN Classifier → Web Application
+
+
+
+\## Technologies Used
+
+\- Python
+
+\- TensorFlow / Keras
+
+\- GAN (Generator \& Discriminator)
+
+\- CNN
+
+\- Streamlit (Frontend)
+
+\- Flask (Backend)
+
+
+
+\## Synthetic Data Generation
+
+A GAN was trained offline to generate synthetic skin lesion images.
+
+These images were used to augment the training dataset for improved
+
+classification performance.
+
+
+
+Due to computational and storage constraints, GAN training scripts
+
+and pretrained weights are not included in this repository.
+
+
+
+\## Repository Structure
+
+\- `gan/` – GAN architecture documentation
+
+\- `notebooks/` – CNN training notebooks
+
+\- `sample\_synthetic\_images/` – Example generated images
+
+\- `app.py` – Streamlit application
+
+\- `flask\_app.py` – Backend API
+
+
+
+\## How to Run
+
 ```bash
+
 pip install -r requirements.txt
+
 streamlit run app.py
+
+
+
